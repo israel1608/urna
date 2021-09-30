@@ -36,20 +36,30 @@ body{
     
     
 }
+#menu{
+    display :none;
+}
+.tela ol{
+    display: block;
+}
+.tela li{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
 #iniciando{
   
     font-size: 25px; 
     display: none;
     
 }
-.tela ol{
+
+#carregando{
+    font-size: 30px;
     display: none;
 }
-.tela li{
-    font-size: 30px;
-    margin-left: 20px;
-}
-.carregando{
+
+#encerrando{
     font-size: 30px;
     display: none;
 }
@@ -76,8 +86,11 @@ body{
     opacity: 0.6;
     
 }
-.candidatos{
+#candidatos{
     display: none;
+}
+.candidatos{
+    display: flex;
 }
 .tela span{
     font-size: 15px;

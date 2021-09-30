@@ -12,44 +12,46 @@
     <div class="urna">
         <div class="tela">
        <span class="pisca" id="iniciando">Iniciando...</span>
-        <ol>
+        <div id='menu'><ol>
                 <li>candidatos
                 <li>informações</li>
                 <li>propostas</li>
                 <li>votação</li>
                 <li>terminar</li>
                 
-        </ol>
-        <h1 class="carregando">Carregando...</h1>
-            <div class="linha candidatos">
-                <div class="bloco-img"><span>zé do caixão</span>
-                <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
-                <div class="bloco-img"><span>zé do caixão</span>
-                <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
-                <div class="bloco-img"><span>zé do caixão</span>
-                <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
-               
-            </div>
-            <div class="linha candidatos">
-                <div class="bloco-img"><span>zé do caixão</span>
-                    <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
-                    <div class="bloco-img"><span>zé do caixão</span>
-                    <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
-                    <div class="bloco-img"><span>zé do caixão</span>
-                    <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
-            </div>
-            <span class="pisca candidatos">pressione 0 para voltar</span>
-       
+        </ol></div>
+        <span class="pisca" id="carregando">Carregando...</span>
+         <div id=candidatos> 
+                    <div class="linha candidatos">
+                        <div class="bloco-img"><span>zé do caixão</span>
+                        <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+                        <div class="bloco-img"><span>zé do caixão</span>
+                        <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+                        <div class="bloco-img"><span>zé do caixão</span>
+                        <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+                    
+                    </div>
+                    <div class="linha candidatos">
+                        <div class="bloco-img"><span>zé do caixão</span>
+                            <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+                            <div class="bloco-img"><span>zé do caixão</span>
+                            <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+                            <div class="bloco-img"><span>zé do caixão</span>
+                            <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+                    </div>
+                    <span class="pisca candidatos">pressione 0 para voltar</span>
+          </div>
+          <span class="pisca" id="encerrando">Encerrando...</span>
         </div>
         <div class="teclado">
             <div class="teclado--linha01">
-                <div class="botao">1</div>
+                <div class="botao" onclick="Fcandidatos()">1</div>
                 <div class="botao">2</div>
                 <div class="botao">3</div>
             </div>
             <div class="teclado--linha">
                 <div class="botao">4</div>
-                <div class="botao">5</div>
+                <div class="botao" onclick="encerrar()">5</div>
                 <div class="botao">6</div>
             </div>
             <div class="teclado--linha">
@@ -58,7 +60,7 @@
                 <div class="botao" onclick="ligar()">9</div>
             </div>
             <div class="teclado--linha">
-                <div class="botao">0</div>
+                <div class="botao" onclick="voltar()">0</div>
             </div>
             <div class="teclado--linha">
                 <div class="botao-delete">delete</div>
