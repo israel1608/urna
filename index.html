@@ -6,11 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>urna</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div class="urna">
         <div class="tela">
-        
+       <span class="pisca" id="iniciando">Iniciando...</span>
+        <ol>
+                <li>candidatos
+                <li>informações</li>
+                <li>propostas</li>
+                <li>votação</li>
+                <li>terminar</li>
+                
+        </ol>
+        <h1 class="carregando">Carregando...</h1>
+            <div class="linha candidatos">
+                <div class="bloco-img"><span>zé do caixão</span>
+                <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+                <div class="bloco-img"><span>zé do caixão</span>
+                <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+                <div class="bloco-img"><span>zé do caixão</span>
+                <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+               
+            </div>
+            <div class="linha candidatos">
+                <div class="bloco-img"><span>zé do caixão</span>
+                    <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+                    <div class="bloco-img"><span>zé do caixão</span>
+                    <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+                    <div class="bloco-img"><span>zé do caixão</span>
+                    <img class= 'imagem' src="imagens/ze_do_caixao_19.02.2020.jpg" alt=""></div>
+            </div>
+            <span class="pisca candidatos">pressione 0 para voltar</span>
+       
         </div>
         <div class="teclado">
             <div class="teclado--linha01">
@@ -26,18 +55,18 @@
             <div class="teclado--linha">
                 <div class="botao">7</div>
                 <div class="botao">8</div>
-                <div class="botao">9</div>
+                <div class="botao" onclick="ligar()">9</div>
             </div>
             <div class="teclado--linha">
                 <div class="botao">0</div>
             </div>
-                <div class="teclado--linha">
-                <div class="botao-confirma">confirm</div>
-                <div class="botao-reset">reset</div>
+            <div class="teclado--linha">
                 <div class="botao-delete">delete</div>
+                <div class="botao-reset">reset</div>
+                <div class="botao-confirma">confirm</div>
             </div>
-
         </div>
     </div>
+<script src="script.js"></script>
 </body>
 </html>
