@@ -3,7 +3,8 @@ let menu =document.querySelector('#menu');
 let carregando=document.querySelector('#carregando');
 let candidatos =document.querySelector('#candidatos');
 let encerrando =document.querySelector('#encerrando');
-let tela =document.querySelector('.tela')
+let tela =document.querySelector('.tela');
+let informações =document.querySelector('#informações');
 let ligado=false;
 let estanomenu=false;
 
@@ -13,7 +14,7 @@ menu.style.display='none';
 carregando.style.display='none';
 candidatos.style.display='none';
 encerrando.style.display='none';
-
+informações.style.display='none';
 }
 
 function ligar(){
@@ -71,4 +72,19 @@ function encerrar(){
 
             }, 2000)}
          }
+}
+function Finformações(){
+    if(ligado==true){
+        if(estanomenu==true){
+            limpar();
+            estanomenu=false;
+            menu.style.display='none';
+            carregando.style.display='block';
+            let pausa = setTimeout(function() {
+            limpar();
+            informações.style.display='block';
+
+        }, 1000)}
+    }
+
 }

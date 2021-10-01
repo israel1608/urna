@@ -23,6 +23,7 @@ body{
     display: flex;
     padding: 20px;
     align-items: center;
+    border-radius: 10px;
 }
 .tela{
     width: 600px;
@@ -185,4 +186,15 @@ body{
 }
 .ligado{
     border: 2px green solid;
+}
+
+#informações{
+    display: none;
+}
+.informação{
+    text-align: justify;
+   
+}
+.titulo{
+    text-align: center;
 }
