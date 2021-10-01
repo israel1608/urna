@@ -12,14 +12,16 @@
     <div class="urna">
         <div class="tela">
        <span class="pisca" id="iniciando">Iniciando...</span>
-        <div id='menu'><ol>
+        <div id='menu'>
+            <p class="titulo-menu">Menu</p>
+            <ol class="menu-lista">
                 <li>Candidatos
                 <li>Informações</li>
                 <li>Propostas</li>
                 <li>Votação</li>
                 <li>Terminar</li>
                 
-        </ol></div>
+            </ol></div>
         <span class="pisca" id="carregando">Carregando...</span>
          <div id=candidatos> 
                     <div class="linha candidatos">
@@ -46,32 +48,45 @@
             <p class="informação">Em todos os anos de eleições no Brasil,além dos acalorados debates entre os candidatos e suas propostas,sempre surge uma pergunta:a urna eletrônica é realmente segura? Essa questão mexe com o imaginário das pessoas e acende discussões na imprensa e nas redes sociais.Toda sorte de supostas fraudes e teorias conspiratórias surge nessa época. O fato é que a Justiça Eleitoral trabalha duro para garantir que a votação ocorra de forma segura,transparente e eficiente. E o sucesso e a qualidade desse trabalho podem ser conferidos pela população ao final de cada eleição.</p>
             <span class="pisca candidatos">pressione 0 para voltar</span>
         </div>
+        <div id="propostas">
+            <div id='menu-propostas'>
+                <p class="titulo-propostas">Propostas</p>
+                <ol class="lista-propostas">
+                <li>Zé do caixão
+                <li>Jonh Wick baiano</li>
+                <li>Bruno Henrique</li>
+                <li>Sikera Junior</li>
+                <li>Messi</li>
+                <li>Vin Diesel</li>      
+        </ol></div>
+        <span class="pisca candidatos">pressione 0 para voltar</span>
+        </div>
           
           <span class="pisca" id="encerrando">Encerrando...</span>
         </div>
         <div class="teclado">
             <div class="teclado--linha01">
-                <div class="botao" onclick="Fcandidatos()">1</div>
-                <div class="botao" onclick="Finformações()">2</div>
-                <div class="botao">3</div>
+                <div class="botao" onclick="clicou(1)">1</div>
+                <div class="botao" onclick="clicou(2)">2</div>
+                <div class="botao" onclick="clicou(3)">3</div>
             </div>
             <div class="teclado--linha">
-                <div class="botao">4</div>
-                <div class="botao" onclick="encerrar()">5</div>
-                <div class="botao">6</div>
+                <div class="botao" onclick="clicou(4)">4</div>
+                <div class="botao" onclick="clicou(5)">5</div>
+                <div class="botao" onclick="clicou(6)">6</div>
             </div>
             <div class="teclado--linha">
-                <div class="botao">7</div>
-                <div class="botao">8</div>
-                <div class="botao" onclick="ligar()">9</div>
+                <div class="botao" onclick="clicou(7)">7</div>
+                <div class="botao" onclick="clicou(8)">8</div>
+                <div class="botao" onclick="clicou(9)">9</div>
             </div>
             <div class="teclado--linha">
-                <div class="botao" onclick="voltar()">0</div>
+                <div class="botao" onclick="clicou(0)">0</div>
             </div>
             <div class="teclado--linha">
-                <div class="botao-delete">delete</div>
-                <div class="botao-reset">reset</div>
-                <div class="botao-confirma">confirm</div>
+                <div class="botao-delete" onclick="delet()">delete</div>
+                <div class="botao-reset" onclick="reset()">reset</div>
+                <div class="botao-confirma" onclick="confirmou()">confirm</div>
             </div>
         </div>
     </div>

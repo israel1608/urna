@@ -18,6 +18,7 @@ body{
   animation-iteration-count: infinite;
 }
 .urna{
+    
     background-color: #fff7b3;
     margin: 50px auto;
     display: flex;
@@ -30,7 +31,7 @@ body{
     height: 350px;
     background-color:black;
     padding: 20px;
-    color: green;
+    color: rgb(0, 161, 0);
     font-family:'Courier New';
     letter-spacing: 1.5px;
     padding-left: 20px;
@@ -40,12 +41,16 @@ body{
 #menu{
     display :none;
 }
+.titulo-menu{
+    text-align: center;
+    font-size: 22px;
+}
+.menu-lista{
+    font-size: 23px;
+    margin-left: 20px;
+}
 .tela ol{
     display: block;
-}
-.tela li{
-    font-size: 30px;
-    margin-left: 20px;
 }
 
 #iniciando{
@@ -56,12 +61,12 @@ body{
 }
 
 #carregando{
-    font-size: 30px;
+    font-size: 25px;
     display: none;
 }
 
 #encerrando{
-    font-size: 30px;
+    font-size: 25px;
     display: none;
 }
 .linha{
@@ -97,6 +102,7 @@ body{
     font-size: 15px;
 }
 .teclado{
+    background-image: url(imagens/fundo-abstrato-da-textura-brilho-claro-na-prata-áspera-metálica-145063970.jpg);
     height: 390px;
     background-color: rgb(94, 94, 94);
     margin-left: 20px;
@@ -197,4 +203,18 @@ body{
 }
 .titulo{
     text-align: center;
+    
+}
+#propostas{
+    display: none;
+}
+#menu-propostas{
+    margin-left: 20px;
+}
+.titulo-propostas{
+    text-align: center;
+    font-size: 22px;
+}
+.lista-propostas{
+    font-size: 23px;
 }
