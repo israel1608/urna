@@ -104,7 +104,6 @@ function Finformações(){
         if(estanomenu==true){
             limpar();
             estanomenu=false;
-            menu.style.display='none';
             carregando.style.display='block';
             let pausa = setTimeout(function() {
             limpar();

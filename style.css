@@ -113,6 +113,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family:monospace;
 }
 .teclado--linha01{
     display: flex;
@@ -149,7 +150,7 @@ body{
 }
 
 .botao-confirma{
-    width: 60px;
+    width: 70px;
     height: 30px;
     background-color: rgb(32, 32, 32);
     color:green;
@@ -199,7 +200,7 @@ body{
 }
 .informação{
     text-align: justify;
-   
+    margin: 0 20px 50px;
 }
 .titulo{
     text-align: center;
@@ -210,6 +211,7 @@ body{
 }
 #menu-propostas{
     margin-left: 20px;
+    margin-bottom: 110px;
 }
 .titulo-propostas{
     text-align: center;
@@ -217,4 +219,22 @@ body{
 }
 .lista-propostas{
     font-size: 23px;
+}
+#cand1{
+    display: none;
+}
+#cand2{
+    display: none;
+}
+#cand3{
+    display: none;
+}
+#cand4{
+    display: none;
+}
+#cand5{
+    display: none;
+}
+#cand6{
+    display: none;
 }
