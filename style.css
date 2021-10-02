@@ -206,12 +206,10 @@ body{
     text-align: center;
     
 }
-#propostas{
-    display: none;
-}
 #menu-propostas{
     margin-left: 20px;
     margin-bottom: 110px;
+    display: none;
 }
 .titulo-propostas{
     text-align: center;
