@@ -236,3 +236,66 @@ body{
 #cand6{
     display: none;
 }
+.votação{
+    display: flex;
+}
+.partedecima1{
+    width: 420px;
+    height: 300px;
+    display:  flex;
+    flex-direction: column;
+    border-bottom: 1px green solid;
+   
+}
+.partedecima2{
+    height: 300px;
+    width: 180px;
+   border-left: green 1.5px solid;
+    
+}
+.botoesespeciais{
+    font-size: 12px !important;
+    
+}
+.especiais{
+    display: none;
+}
+.partedecima1 p{
+    text-align: center;
+}
+.numero{
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px green solid;
+    text-align: center;
+    line-height: 40px;
+}
+.numeros{
+    text-align: center;
+    font-size: 20px;
+}
+.votinfo{
+    text-align: left;
+    justify-content: right;
+    margin-top: 40px;
+}
+
+.imgvoto{
+    width: 100%;
+    height:50% ;
+    text-align: center;
+}
+.imgvoto img{
+    height: 130px;
+    width: 130px;
+    border: 1px green solid;
+    opacity: 0.6;
+    border-radius: 50%;
+}
+.votação{
+    display: none;
+}
+.especiais .pisca{
+    margin-left: 200px;
+}

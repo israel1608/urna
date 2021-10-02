@@ -12,6 +12,8 @@ let cand3 =document.querySelector('#cand3');
 let cand4 =document.querySelector('#cand4');
 let cand5 =document.querySelector('#cand5');
 let cand6 =document.querySelector('#cand6');
+let votaçao =document.querySelector('.votação');
+let botoesespeciais =document.querySelector('.especiais');
 
 
 let ligado=false;
@@ -33,6 +35,8 @@ cand3.style.display='none';
 cand4.style.display='none';
 cand5.style.display='none';
 cand6.style.display='none';
+votaçao.style.display='none';
+botoesespeciais.style.display='none';
 }
 
 function clicou(n){
@@ -51,6 +55,9 @@ function clicou(n){
             break;
         case 3 :
             Fpropostas();
+            break;
+        case 4 :
+            Fvotaçao();
             break;
         case 5 :
             encerrar();
@@ -238,4 +245,20 @@ function escolheu(m){
             break;
     }
   }
+}
+function Fvotaçao(){
+    if(ligado==true){
+        if(estanomenu==true){
+            limpar();
+            estanomenu=false;
+            menupropostas=false;
+            carregando.style.display='block';
+            let pausa = setTimeout(function() {
+            limpar();
+            votaçao.style.display='flex';
+            botoesespeciais.style.display='block';
+
+        }, 1000)}
+    }
+
 }
