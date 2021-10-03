@@ -95,8 +95,10 @@
        <div class="votação">
         <div class="partedecima1">
             <p>Seu voto para </p>
-            <div class="numeros"><div class="numero">3</div>
-            <div class="numero">8</div></div>
+            <div class="numeros">
+                <div class="numero"></div>
+                <div class="numero"></div>
+            </div>
             <div class="votinfo">
                 Nome: Zé do caixão <br>
                 partido: PZdoB <br>
@@ -108,33 +110,35 @@
                 <img src="imagens/ze_do_caixao_19.02.2020.jpg" alt="">
             </div>
             <div class="imgvoto"><span>Vice</span>
-                <img src="imagens/messi.jpg" alt="">
-                
+                <img src="imagens/messi.jpg" alt="">  
             </div>
         </div>
        
-       </div> <div class="especiais"><span class="botoesespeciais">Pressione CONFIRM para confimar</span><br>
-        <span class="botoesespeciais">DELETE para deletar</span><br>
-        <span class="botoesespeciais">RESET para reiniciar</span>
-        <span class="pisca candidatos">pressione 0 para voltar</span></div>
+       </div>
+        <div class="especiais">
+            <span class="botoesespeciais">Pressione CONFIRM para confimar</span><br>
+            <span class="botoesespeciais">DELETE para deletar</span><br>
+            <span class="botoesespeciais">RESET para reiniciar</span>
+            <span class="pisca candidatos">pressione 0 para voltar</span>
+        </div>
        
           <span class="pisca" id="encerrando">Encerrando...</span>
         </div>
         <div class="teclado">
             <div class="teclado--linha01">
-                <div class="botao" onclick="clicou(1);escolheu(1)">1</div>
-                <div class="botao" onclick="clicou(2);escolheu(2)">2</div>
-                <div class="botao" onclick="clicou(3);escolheu(3)">3</div>
+                <div class="botao" onclick="clicou(1);escolheu(1);votou(1)">1</div>
+                <div class="botao" onclick="clicou(2);escolheu(2);votou(2)">2</div>
+                <div class="botao" onclick="clicou(3);escolheu(3);votou(3)">3</div>
             </div>
             <div class="teclado--linha">
-                <div class="botao" onclick="clicou(4);escolheu(4)">4</div>
-                <div class="botao" onclick="clicou(5);escolheu(5)">5</div>
-                <div class="botao" onclick="clicou(6);escolheu(6)">6</div>
+                <div class="botao" onclick="clicou(4);escolheu(4);votou(4)">4</div>
+                <div class="botao" onclick="clicou(5);escolheu(5);votou(5)">5</div>
+                <div class="botao" onclick="clicou(6);escolheu(6);votou(6)">6</div>
             </div>
             <div class="teclado--linha">
-                <div class="botao" onclick="clicou(7);escolheu(7)">7</div>
-                <div class="botao" onclick="clicou(8);escolheu(8)">8</div>
-                <div class="botao" onclick="clicou(9);escolheu(9)">9</div>
+                <div class="botao" onclick="clicou(7);escolheu(7);votou(7)">7</div>
+                <div class="botao" onclick="clicou(8);escolheu(8);votou(8)">8</div>
+                <div class="botao" onclick="clicou(9);escolheu(9);votou(9)">9</div>
             </div>
             <div class="teclado--linha">
                 <div class="botao" onclick="clicou(0);escolheu(0)">0</div>
@@ -146,6 +150,8 @@
             </div>
         </div>
  </div>
+
+<script src="etapas.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

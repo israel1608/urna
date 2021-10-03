@@ -6,20 +6,25 @@ let encerrando =document.querySelector('#encerrando');
 let tela =document.querySelector('.tela');
 let informações =document.querySelector('#informações');
 let propostas =document.querySelector('#menu-propostas');
+
 let cand1 =document.querySelector('#cand1');
 let cand2 =document.querySelector('#cand2');
 let cand3 =document.querySelector('#cand3');
 let cand4 =document.querySelector('#cand4');
 let cand5 =document.querySelector('#cand5');
 let cand6 =document.querySelector('#cand6');
+
 let votaçao =document.querySelector('.votação');
 let botoesespeciais =document.querySelector('.especiais');
+let numeros =document.querySelector('.numeros');
+let votoinfo =document.querySelector('.votinfo');
 
 
 let ligado=false;
 let estanomenu=false;
 let menupropostas=false;
 let candidatoproposta=false;
+let modovotação=false;
 
 function limpar(){
 iniciando.style.display='none';
@@ -45,21 +50,25 @@ function clicou(n){
          ligar();
         break;
         case 1 :
+            
             Fcandidatos();
             break;
         case 0 :
             voltar();
             break;
         case 2 :
+            
             Finformações();
             break;
         case 3 :
+            
             Fpropostas();
             break;
         case 4 :
             Fvotaçao();
             break;
         case 5 :
+            
             encerrar();
             break;
         default:
@@ -84,12 +93,14 @@ function Fcandidatos(){
     if(ligado==true){
         if(estanomenu==true){
             limpar();
+            modovotação=false;
             estanomenu=false;
             menupropostas=false;
             carregando.style.display='block';
             let pausa = setTimeout(function() {
             limpar();
             candidatos.style.display='block';
+
 
         }, 1000)}
     }
@@ -101,6 +112,7 @@ function voltar(){
             if(candidatoproposta==false){
                     menupropostas=false;
                     limpar();
+                    modovotação=false;
                     carregando.style.display='block';
                     let pausa = setTimeout(function() {
                     limpar();
@@ -112,6 +124,7 @@ function voltar(){
             else{
                 menupropostas=false;
                 limpar();
+                modovotação=false;
                 carregando.style.display='block';
                 let pausa = setTimeout(function() {
                 limpar();
@@ -142,6 +155,7 @@ function Finformações(){
     if(ligado==true){
         if(estanomenu==true){
             limpar();
+            modovotação=false;
             estanomenu=false;
             menupropostas=false;
             carregando.style.display='block';
@@ -157,6 +171,7 @@ function Fpropostas(){
     if(ligado==true){
         if(estanomenu==true){
             limpar();
+            modovotação=false;
             estanomenu=false;
             carregando.style.display='block';
             let pausa = setTimeout(function() {
@@ -257,8 +272,18 @@ function Fvotaçao(){
             limpar();
             votaçao.style.display='flex';
             botoesespeciais.style.display='block';
+            modovotação=true; 
+            votou();
 
         }, 1000)}
     }
 
+}
+function votou(v){
+        if(modovotação==true){
+            console.log('apertou em '+v);
+    } 
+    else{
+        console.log('modo votação: desligado');
+    }
 }
