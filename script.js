@@ -13,11 +13,13 @@ let cand3 =document.querySelector('#cand3');
 let cand4 =document.querySelector('#cand4');
 let cand5 =document.querySelector('#cand5');
 let cand6 =document.querySelector('#cand6');
-
+//vareaveis de controle 
 let votaçao =document.querySelector('.votação');
 let botoesespeciais =document.querySelector('.especiais');
 let numeros =document.querySelector('.numeros');
-let votoinfo =document.querySelector('.votinfo');
+let votinfo =document.querySelector('.votinfo');
+let partedecima1=document.querySelector('.partedecima1');
+let partedecima2=document.querySelector('.partedecima2');
 
 
 let ligado=false;
@@ -25,6 +27,9 @@ let estanomenu=false;
 let menupropostas=false;
 let candidatoproposta=false;
 let modovotação=false;
+let EtapaAtual= 0;
+let numero = "";
+
 
 function limpar(){
 iniciando.style.display='none';
@@ -268,22 +273,61 @@ function Fvotaçao(){
             estanomenu=false;
             menupropostas=false;
             carregando.style.display='block';
+            votou();
             let pausa = setTimeout(function() {
             limpar();
-            votaçao.style.display='flex';
-            botoesespeciais.style.display='block';
-            modovotação=true; 
-            votou();
+            modovotação=true;
+            ComeçarEtapa();
+            
 
         }, 1000)}
     }
 
 }
 function votou(v){
-        if(modovotação==true){
-            console.log('apertou em '+v);
-    } 
-    else{
-        console.log('modo votação: desligado');
-    }
+            
+            if(modovotação==true){
+              
+                console.log('clicou em '+v);
+               let numeropiscando= document.querySelector('.numero.pisca');
+               if(numeropiscando !== null){
+                   numeropiscando.innerHTML = v;
+                   numero = `${numero}${v}`;
+                   numeropiscando.classList.remove('pisca');
+                    if(numeropiscando.nextElementSibling!==null){ 
+                         numeropiscando.nextElementSibling.classList.add('pisca');
+                    } else{
+                        AtualizaInterface();
+                    }
+
+               }
+        } 
+        else{
+            console.log('modo votação: desligado');
+           
+        }
+}
+function ComeçarEtapa(){
+    let etapa=etapas[EtapaAtual];
+    let numeroHTML='';
+
+    for(let i=0;i<etapa.numeros;i++){
+        if(i === 0){
+            numeroHTML +='<div class="numero pisca"></div>';
+        }
+        else{
+        numeroHTML +='<div class="numero"></div>';
+        }
+}
+
+    votinfo.innerHTML= etapa.titulo;
+    numeros.innerHTML= numeroHTML;
+    
+    votaçao.style.display='flex';
+    partedecima1.style.display='flex';
+    partedecima2.style.display='block';
+    botoesespeciais.style.display='block';
+}
+function AtualizaInterface(){
+        alert("finalizou o voto");    
 }

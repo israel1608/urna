@@ -1,7 +1,7 @@
 let etapas=[
     {
         titulo: 'PRESIDENTE',
-        numeros: 2,
+        numeros: 5,
         candidatos:[
             {
                 numero: 22,
