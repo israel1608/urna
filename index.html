@@ -41,12 +41,12 @@
                             <div class="bloco-img"><span>Vin Diesel</span>
                             <img class= 'imagem' src="imagens/vin diesel.jpg" alt=""></div>
                     </div>
-                    <span class="pisca candidatos">pressione 0 para voltar</span>
+                    <span class="pisca candidatos">pressione # para voltar</span>
           </div>
           <div id="informações">
             <p class="titulo">Por que a urna eletrônica é segura</p>
             <p class="informação">Em todos os anos de eleições no Brasil,além dos acalorados debates entre os candidatos e suas propostas,sempre surge uma pergunta:a urna eletrônica é realmente segura? Essa questão mexe com o imaginário das pessoas e acende discussões na imprensa e nas redes sociais.Toda sorte de supostas fraudes e teorias conspiratórias surge nessa época. O fato é que a Justiça Eleitoral trabalha duro para garantir que a votação ocorra de forma segura,transparente e eficiente. E o sucesso e a qualidade desse trabalho podem ser conferidos pela população ao final de cada eleição.</p>
-            <span class="pisca candidatos">pressione 0 para voltar</span>
+            <span class="pisca candidatos">pressione # para voltar</span>
         </div>
      <div id="propostas">
                 <div id='menu-propostas'>
@@ -58,38 +58,38 @@
                     <li>Sikera Junior</li>
                     <li>Messi</li>
                     <li>Vin Diesel</li></ol>
-                    <span class="pisca candidatos">pressione 0 para voltar</span>
+                    <span class="pisca candidatos">pressione # para voltar</span>
                 </div>
                
                     <div id="cand1">
                         <p class="titulo-propostas">Zé do caixão</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus corrupti magnam facilis doloremque, distinctio, placeat iusto, saepe rem atque incidunt fugiat. Inventore exercitationem illo quasi, incidunt tempore soluta odit eveniet!</p>
-                        <span class="pisca candidatos">pressione 0 para voltar</span>
+                        <span class="pisca candidatos">pressione # para voltar</span>
                     </div>
                     <div id="cand2">
                         <p class="titulo-propostas">Jonh wick baiano</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus corrupti magnam facilis doloremque, distinctio, placeat iusto, saepe rem atque incidunt fugiat. Inventore exercitationem illo quasi, incidunt tempore soluta odit eveniet!</p>
-                        <span class="pisca candidatos">pressione 0 para voltar</span>
+                        <span class="pisca candidatos">pressione # para voltar</span>
                     </div>
                     <div id="cand3">
                         <p class="titulo-propostas">Bruno henrique</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus corrupti magnam facilis doloremque, distinctio, placeat iusto, saepe rem atque incidunt fugiat. Inventore exercitationem illo quasi, incidunt tempore soluta odit eveniet!</p>
-                        <span class="pisca candidatos">pressione 0 para voltar</span>
+                        <span class="pisca candidatos">pressione # para voltar</span>
                     </div>
                     <div id="cand4">
                         <p class="titulo-propostas">sikera junior</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus corrupti magnam facilis doloremque, distinctio, placeat iusto, saepe rem atque incidunt fugiat. Inventore exercitationem illo quasi, incidunt tempore soluta odit eveniet!</p>
-                        <span class="pisca candidatos">pressione 0 para voltar</span>
+                        <span class="pisca candidatos">pressione # para voltar</span>
                     </div>
                     <div id="cand5">
                         <p class="titulo-propostas">Messi</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus corrupti magnam facilis doloremque, distinctio, placeat iusto, saepe rem atque incidunt fugiat. Inventore exercitationem illo quasi, incidunt tempore soluta odit eveniet!</p>
-                        <span class="pisca candidatos">pressione 0 para voltar</span>
+                        <span class="pisca candidatos">pressione # para voltar</span>
                     </div>
                     <div id="cand6">
                         <p class="titulo-propostas">Vin Diesel</p>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus corrupti magnam facilis doloremque, distinctio, placeat iusto, saepe rem atque incidunt fugiat. Inventore exercitationem illo quasi, incidunt tempore soluta odit eveniet!</p>
-                        <span class="pisca candidatos">pressione 0 para voltar</span>
+                        <span class="pisca candidatos">pressione # para voltar</span>
                     </div>     
        </div>
        <div class="votação">
@@ -99,17 +99,12 @@
                 <div class="numero"></div>
                
             </div>
-            <div class="votinfo">
-                
-            </div>
+            <div class="votinfo"></div>
+            <div class="descrição"></div>
         </div>
         <div class="partedecima2">
-            <div class="imgvoto"><span>Candidato</span>
-                <img src="imagens/ze_do_caixao_19.02.2020.jpg" alt="">
-            </div>
-            <div class="imgvoto"><span>Vice</span>
-                <img src="imagens/lineuzinho.jpg" alt="">  
-            </div>
+            <div class="imgvoto"></div>
+           
         </div>
        
        </div>
@@ -117,7 +112,7 @@
             <span class="botoesespeciais">Pressione CONFIRM para confimar</span><br>
             <span class="botoesespeciais">DELETE para deletar</span><br>
             <span class="botoesespeciais">RESET para reiniciar</span>
-            <span class="pisca candidatos">pressione 0 para voltar</span>
+            <span class="pisca candidatos">pressione # para voltar</span>
         </div>
        
           <span class="pisca" id="encerrando">Encerrando...</span>
@@ -138,8 +133,11 @@
                 <div class="botao" onclick="clicou(8);escolheu(8);votou(8)">8</div>
                 <div class="botao" onclick="clicou(9);escolheu(9);votou(9)">9</div>
             </div>
+           
             <div class="teclado--linha">
-                <div class="botao" onclick="clicou(0);escolheu(0)">0</div>
+                <div class="botao-voltar" onclick="clicou(0)">#</div>
+                <div class="botao" onclick="votou(0)">0</div>
+                <div class="botao-on" onclick="clicou(11)">*</div>
             </div>
             <div class="teclado--linha">
                 <div class="botao-delete" onclick="delet()">delete</div>

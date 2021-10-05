@@ -20,6 +20,8 @@ let numeros =document.querySelector('.numeros');
 let votinfo =document.querySelector('.votinfo');
 let partedecima1=document.querySelector('.partedecima1');
 let partedecima2=document.querySelector('.partedecima2');
+let descrição = document.querySelector('.descrição');
+let imgvoto = document.querySelector('.imgvoto');
 
 
 let ligado=false;
@@ -51,7 +53,7 @@ botoesespeciais.style.display='none';
 
 function clicou(n){
     switch(n){
-        case 9 :
+        case 11 :
          ligar();
         break;
         case 1 :
@@ -123,7 +125,10 @@ function voltar(){
                     limpar();
                     menu.style.display='block';
                     estanomenu=true;
-                    
+                    numero = '';
+                    descrição.innerHTML = '';
+                    imgvoto.innerHTML = '';
+
                     }, 1000)
             } 
             else{
@@ -288,7 +293,7 @@ function votou(v){
             
             if(modovotação==true){
               
-                console.log('clicou em '+v);
+               
                let numeropiscando= document.querySelector('.numero.pisca');
                if(numeropiscando !== null){
                    numeropiscando.innerHTML = v;
@@ -310,6 +315,9 @@ function votou(v){
 function ComeçarEtapa(){
     let etapa=etapas[EtapaAtual];
     let numeroHTML='';
+    numero = '';
+    descrição.innerHTML = '';
+    imgvoto.innerHTML = '';
 
     for(let i=0;i<etapa.numeros;i++){
         if(i === 0){
@@ -329,5 +337,28 @@ function ComeçarEtapa(){
     botoesespeciais.style.display='block';
 }
 function AtualizaInterface(){
-        alert("finalizou o voto");    
+            let etapa = etapas[EtapaAtual];
+            let candidato = etapa.candidatos.filter((item)=>{
+            if(item.numero === numero){
+                return true;
+            } else{
+                return false;
+            }
+        });
+    if(candidato.length > 0){
+        candidato = candidato[0];
+        descrição.innerHTML = `Nome: ${candidato.nome} <br/>Partido: ${candidato.partido}`;
+
+        let fotosHTML = '';
+            for(let i in candidato.fotos){
+                fotosHTML+= `<div class="imgvoto"><div>${candidato.fotos[i].legenda}</div><img src="imagens/${candidato.fotos[i].url}" alt="">`;
+            };
+
+        imgvoto.innerHTML = fotosHTML;
+    } else{
+        descrição.innerHTML = "Voto nulo";
+    }
+}
+function reset(){
+    ComeçarEtapa();
 }

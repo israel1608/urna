@@ -148,6 +148,41 @@ body{
 .botao-delete:active{
     box-shadow:0 3px 3px rgb(94, 94, 94);
 }
+.botao-on:active{
+    box-shadow:0 3px 3px rgb(94, 94, 94);
+}
+.botao-voltar:active{
+    box-shadow:0 3px 3px rgb(94, 94, 94);
+}
+.botao-on{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(0, 0, 82);
+    color:white;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    box-shadow:0 3px 3px  rgb(12, 12, 12);
+    cursor: pointer;
+}
+.botao-voltar{
+    width: 40px;
+    height: 40px;
+    background-color: rgb(223, 223, 223);
+    color:black;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    box-shadow:0 3px 3px  rgb(12, 12, 12);
+    cursor: pointer;
+}
+
 
 .botao-confirma{
     width: 70px;
@@ -191,6 +226,7 @@ body{
     cursor: pointer;
     box-shadow:0 3px 3px  rgb(12, 12, 12);
 }
+
 .ligado{
     border: 2px green solid;
 }
@@ -282,6 +318,7 @@ body{
     text-align: left;
     justify-content: right;
     margin-top: 40px;
+    margin-bottom: 15px;
 }
 
 .imgvoto{

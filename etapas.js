@@ -1,28 +1,28 @@
 let etapas=[
     {
-        titulo: 'PRESIDENTE',
+        titulo: 'VEREADOR',
         numeros: 5,
         candidatos:[
             {
-                numero: 22,
+                numero: '22222',
                 nome: 'Zé do caixão',
                 partido: 'PZdoB',
                 vice:'Lineuzinho',
                 fotos:[
-                    {url:'imagens/ze_do_caixao_19.02.2020.jpg',legenda:'Presidente'},
-                    {url:'imagens/lineuzinho.jpg',legenda:'Vice'}
+                    {url:'ze_do_caixao_19.02.2020.jpg',legenda:'Candidato'},
+                    
                 ]
 
 
         },
             {
-                numero: 55,
+                numero: '55555',
                 nome: 'Messi',
                 partido: 'PZdoB',
                 vice:'Lineuzinho',
                 fotos:[
-                    {url:'imagens/messi.jpg',legenda:'Presidente'},
-                    {url:'imagens/lineuzinho.jpg',legenda:'Vice'}
+                    {url:'messi.jpg',legenda:'Candidato'},
+                    {url:'lineuzinho.jpg',legenda:'Vice'}
                 ]
 
 
