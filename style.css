@@ -145,7 +145,7 @@ body{
 .botao-reset:active{
     box-shadow:0 3px 3px rgb(94, 94, 94);
 }
-.botao-delete:active{
+.botao-branco:active{
     box-shadow:0 3px 3px rgb(94, 94, 94);
 }
 .botao-on:active{
@@ -157,8 +157,8 @@ body{
 .botao-on{
     width: 40px;
     height: 40px;
-    background-color: rgb(0, 0, 82);
-    color:white;
+    background-color: white;
+    color:black;
     font-size: 25px;
     text-align: center;
     justify-content: center;
@@ -171,7 +171,7 @@ body{
 .botao-voltar{
     width: 40px;
     height: 40px;
-    background-color: rgb(223, 223, 223);
+    background-color: white;
     color:black;
     font-size: 25px;
     text-align: center;
@@ -197,12 +197,13 @@ body{
     display: flex;
     cursor: pointer;
     box-shadow:0 3px 3px  rgb(12, 12, 12);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.botao-delete{
+.botao-branco{
     width: 60px;
     height: 30px;
     background-color: rgb(32, 32, 32);
-    color:red;
+    color:white;
     font-size: 20px;
     text-align: center;
     justify-content: center;
@@ -211,6 +212,7 @@ body{
     display: flex;
     cursor: pointer;
     box-shadow:0 3px 3px  rgb(12, 12, 12);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .botao-reset{
     width: 60px;
@@ -225,6 +227,7 @@ body{
     display: flex;
     cursor: pointer;
     box-shadow:0 3px 3px  rgb(12, 12, 12);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .ligado{
@@ -286,7 +289,7 @@ body{
 .partedecima2{
     height: 300px;
     width: 180px;
-   border-left: green 1.5px solid;
+   border-left: green 1px solid;
    display: none;
     
 }

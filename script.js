@@ -31,6 +31,7 @@ let candidatoproposta=false;
 let modovotação=false;
 let EtapaAtual= 0;
 let numero = "";
+let branco = false;
 
 
 function limpar(){
@@ -86,6 +87,7 @@ function clicou(n){
 function ligar(){
     if(ligado==false){
     ligado=true;
+    modovotação=false;
     limpar();
     tela.classList.add('ligado');
     iniciando.style.display='block';
@@ -118,8 +120,8 @@ function voltar(){
         if(estanomenu==false){
             if(candidatoproposta==false){
                     menupropostas=false;
-                    limpar();
                     modovotação=false;
+                    limpar();
                     carregando.style.display='block';
                     let pausa = setTimeout(function() {
                     limpar();
@@ -133,8 +135,8 @@ function voltar(){
             } 
             else{
                 menupropostas=false;
-                limpar();
                 modovotação=false;
+                limpar();
                 carregando.style.display='block';
                 let pausa = setTimeout(function() {
                 limpar();
@@ -307,14 +309,11 @@ function votou(v){
 
                }
         } 
-        else{
-            console.log('modo votação: desligado');
-           
-        }
 }
 function ComeçarEtapa(){
-    let etapa=etapas[EtapaAtual];
+    let etapa = etapas[EtapaAtual];
     let numeroHTML='';
+    branco = false;
     numero = '';
     descrição.innerHTML = '';
     imgvoto.innerHTML = '';
@@ -347,7 +346,9 @@ function AtualizaInterface(){
         });
     if(candidato.length > 0){
         candidato = candidato[0];
-        descrição.innerHTML = `Nome: ${candidato.nome} <br/>Partido: ${candidato.partido}`;
+            if(candidato.vice === ''){
+            descrição.innerHTML = `Nome: ${candidato.nome} <br/>Partido: ${candidato.partido}`;
+            } else{descrição.innerHTML = `Nome: ${candidato.nome} <br/>Partido: ${candidato.partido}<br/>Vice: ${candidato.vice}`;}
 
         let fotosHTML = '';
             for(let i in candidato.fotos){
@@ -360,5 +361,45 @@ function AtualizaInterface(){
     }
 }
 function reset(){
-    ComeçarEtapa();
+        if(ligado==true){
+                if( modovotação==true){
+            ComeçarEtapa();
+        }
+    }
+}
+function BRANCO(){
+    if(ligado==true){
+            if( modovotação==true){
+                if(numero === ''){
+                branco = true;
+                numeros.innerHTML='***';
+                descrição.innerHTML = "Voto em BRANCO";
+            }
+        }
+    }
+}
+function confirmar(){
+        if(ligado==true){
+            if( modovotação==true){
+                let etapa = etapas[EtapaAtual];
+                let votoConfirmado = false;
+                if(branco === true){
+                    votoConfirmado = true;
+                    console.log('Confirmando como BRANCO');
+                   }else if(numero.length === etapa.numeros){
+                    votoConfirmado = true;
+                   console.log('Confirmado como '+numero);
+                }
+                  
+                  
+                if(votoConfirmado){
+                    EtapaAtual++;
+                    if(etapas[EtapaAtual] !== undefined){
+                        ComeçarEtapa();
+                    } else {
+                        console.log('FIM !!!');
+                    }
+                }
+            }
+        }
 }
