@@ -22,6 +22,7 @@ let partedecima1=document.querySelector('.partedecima1');
 let partedecima2=document.querySelector('.partedecima2');
 let descrição = document.querySelector('.descrição');
 let imgvoto = document.querySelector('.imgvoto');
+let fimvotaçao = document.querySelector('.fimvotaçao');
 
 
 let ligado=false;
@@ -50,6 +51,7 @@ cand5.style.display='none';
 cand6.style.display='none';
 votaçao.style.display='none';
 botoesespeciais.style.display='none';
+fimvotaçao.style.display='none';
 }
 
 function clicou(n){
@@ -121,6 +123,7 @@ function voltar(){
             if(candidatoproposta==false){
                     menupropostas=false;
                     modovotação=false;
+                    EtapaAtual=0;
                     limpar();
                     carregando.style.display='block';
                     let pausa = setTimeout(function() {
@@ -136,6 +139,7 @@ function voltar(){
             else{
                 menupropostas=false;
                 modovotação=false;
+                EtapaAtual=0;
                 limpar();
                 carregando.style.display='block';
                 let pausa = setTimeout(function() {
@@ -383,12 +387,24 @@ function confirmar(){
             if( modovotação==true){
                 let etapa = etapas[EtapaAtual];
                 let votoConfirmado = false;
-                if(branco === true){
-                    votoConfirmado = true;
-                    console.log('Confirmando como BRANCO');
-                   }else if(numero.length === etapa.numeros){
-                    votoConfirmado = true;
-                   console.log('Confirmado como '+numero);
+                let candidato = etapa.candidatos.filter((item)=>{
+                if(item.numero === numero){
+                    return true;
+                } else{
+                    return false;
+                }
+            });
+            if(branco === true){
+                votoConfirmado = true;
+                console.log('Confirmando como BRANCO');
+                } else if(numero.length === etapa.numeros){ 
+                        if(candidato.length === 0){
+                            votoConfirmado = true;
+                            console.log('Confirmado como voto NULO');
+                        } else {
+                        votoConfirmado = true;
+                    console.log('Confirmado como '+numero);
+                    }
                 }
                   
                   
@@ -397,7 +413,8 @@ function confirmar(){
                     if(etapas[EtapaAtual] !== undefined){
                         ComeçarEtapa();
                     } else {
-                        console.log('FIM !!!');
+                        limpar();
+                        fimvotaçao.style.display='block';
                     }
                 }
             }

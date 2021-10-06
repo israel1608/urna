@@ -342,3 +342,10 @@ body{
 .especiais .pisca{
     margin-left: 200px;
 }
+.fimvotaçao{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 25% ;
+    color: yellow;
+    display: none;
+}
