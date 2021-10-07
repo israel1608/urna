@@ -1,59 +1,65 @@
-let iniciando =document.querySelector('#iniciando');
-let menu =document.querySelector('#menu');
-let carregando=document.querySelector('#carregando');
-let candidatos =document.querySelector('#candidatos');
-let encerrando =document.querySelector('#encerrando');
-let tela =document.querySelector('.tela');
-let informações =document.querySelector('#informações');
-let propostas =document.querySelector('#menu-propostas');
+//VAREAVEIS DE CONTROLE TELA 
+let iniciando = document.querySelector('#iniciando');
+let menu = document.querySelector('#menu');
+let carregando = document.querySelector('#carregando');
+let candidatos = document.querySelector('#candidatos');
+let encerrando = document.querySelector('#encerrando');
+let tela = document.querySelector('.tela');
+let informações = document.querySelector('#informações');
 
-let cand1 =document.querySelector('#cand1');
-let cand2 =document.querySelector('#cand2');
-let cand3 =document.querySelector('#cand3');
-let cand4 =document.querySelector('#cand4');
-let cand5 =document.querySelector('#cand5');
-let cand6 =document.querySelector('#cand6');
-//vareaveis de controle 
-let votaçao =document.querySelector('.votação');
-let botoesespeciais =document.querySelector('.especiais');
-let numeros =document.querySelector('.numeros');
-let votinfo =document.querySelector('.votinfo');
-let partedecima1=document.querySelector('.partedecima1');
-let partedecima2=document.querySelector('.partedecima2');
+//controle de tela PROPOSTAS
+let propostas = document.querySelector('#menu-propostas');
+let cand1 = document.querySelector('#cand1');
+let cand2 = document.querySelector('#cand2');
+let cand3 = document.querySelector('#cand3');
+let cand4 = document.querySelector('#cand4');
+let cand5 = document.querySelector('#cand5');
+let cand6 = document.querySelector('#cand6');
+//controle de tela VOTAÇÃO
+let votaçao = document.querySelector('.votação');
+let botoesespeciais = document.querySelector('.especiais');
+let numeros = document.querySelector('.numeros');
+let votinfo = document.querySelector('.votinfo');
+let partedecima1 = document.querySelector('.partedecima1');
+let partedecima2 = document.querySelector('.partedecima2');
 let descrição = document.querySelector('.descrição');
 let imgvoto = document.querySelector('.imgvoto');
 let fimvotaçao = document.querySelector('.fimvotaçao');
+let resultativo = document.querySelector('.resultativo');
+let resultadovotaçao = document.querySelector('.resultado-votaçao');
+let caixa = document.querySelector('.caixa');
 
-
-let ligado=false;
-let estanomenu=false;
-let menupropostas=false;
-let candidatoproposta=false;
-let modovotação=false;
-let EtapaAtual= 0;
+//VAREAVEIS DE APOIO
+let ligado = false;
+let estanomenu = false;
+let menupropostas = false;
+let candidatoproposta = false;
+let modovotação=  false;
+let EtapaAtual = 0;
 let numero = "";
 let branco = false;
 
 
+// FUNÇÃO DE LIMPAR TELA
 function limpar(){
-iniciando.style.display='none';
-menu.style.display='none';
-carregando.style.display='none';
-candidatos.style.display='none';
-encerrando.style.display='none';
-informações.style.display='none';
-propostas.style.display='none';
-cand1.style.display='none';
-cand2.style.display='none';
-cand3.style.display='none';
-cand4.style.display='none';
-cand5.style.display='none';
-cand6.style.display='none';
-votaçao.style.display='none';
-botoesespeciais.style.display='none';
-fimvotaçao.style.display='none';
+iniciando.style.display = 'none';
+menu.style.display = 'none';
+carregando.style.display = 'none';
+candidatos.style.display = 'none';
+encerrando.style.display = 'none';
+informações.style.display = 'none';
+propostas.style.display = 'none';
+cand1.style.display = 'none';
+cand2.style.display = 'none';
+cand3.style.display = 'none';
+cand4.style.display = 'none';
+cand5.style.display = 'none';
+cand6.style.display = 'none';
+votaçao.style.display = 'none';
+botoesespeciais.style.display = 'none';
+fimvotaçao.style.display = 'none';
 }
-
+// MENU
 function clicou(n){
     switch(n){
         case 11 :
@@ -85,7 +91,7 @@ function clicou(n){
             break;
     }
 }
-
+// FUNÇOES DO MENU
 function ligar(){
     if(ligado==false){
     ligado=true;
@@ -134,7 +140,7 @@ function voltar(){
                     descrição.innerHTML = '';
                     imgvoto.innerHTML = '';
 
-                    }, 1000)
+                    }, 500)
             } 
             else{
                 menupropostas=false;
@@ -200,6 +206,7 @@ function Fpropostas(){
     }
 
 }
+// SUB MENU DE PROPOSTAS
 function escolheu(m){
     if(menupropostas==true){
     switch (m) {
@@ -277,12 +284,14 @@ function escolheu(m){
     }
   }
 }
+// ÁREA DE VOTAÇÃO
 function Fvotaçao(){
     if(ligado==true){
         if(estanomenu==true){
             limpar();
             estanomenu=false;
             menupropostas=false;
+            
             carregando.style.display='block';
             votou();
             let pausa = setTimeout(function() {
@@ -291,7 +300,7 @@ function Fvotaçao(){
             ComeçarEtapa();
             
 
-        }, 1000)}
+        }, 500)}
     }
 
 }
@@ -305,7 +314,7 @@ function votou(v){
                    numeropiscando.innerHTML = v;
                    numero = `${numero}${v}`;
                    numeropiscando.classList.remove('pisca');
-                    if(numeropiscando.nextElementSibling!==null){ 
+                    if(numeropiscando.nextElementSibling !== null){ 
                          numeropiscando.nextElementSibling.classList.add('pisca');
                     } else{
                         AtualizaInterface();
@@ -364,6 +373,7 @@ function AtualizaInterface(){
         descrição.innerHTML = "Voto nulo";
     }
 }
+// Botoes--especiais 
 function reset(){
         if(ligado==true){
                 if( modovotação==true){
@@ -385,7 +395,7 @@ function BRANCO(){
 function confirmar(){
         if(ligado==true){
             if( modovotação==true){
-                let etapa = etapas[EtapaAtual];
+                let etapa = etapas[EtapaAtual];// analise se o voto foi nulo ou nao
                 let votoConfirmado = false;
                 let candidato = etapa.candidatos.filter((item)=>{
                 if(item.numero === numero){
@@ -394,16 +404,49 @@ function confirmar(){
                     return false;
                 }
             });
-            if(branco === true){
+            if(branco === true){ //analise se o voto foi em branco
                 votoConfirmado = true;
                 console.log('Confirmando como BRANCO');
-                } else if(numero.length === etapa.numeros){ 
-                        if(candidato.length === 0){
+                let resultativo = document.querySelector('.resultativo.ativo')    
+                if(resultativo !== null){
+                    resultativo.innerHTML = 'Votou em BRANCO';
+                    
+                    resultativo.classList.remove('ativo');
+                } 
+                if(resultativo.nextElementSibling!==null){ 
+                    resultativo.nextElementSibling.classList.add('ativo');
+                        }
+
+            } else if(numero.length === etapa.numeros){ 
+                    if(candidato.length === 0){//confere se o numero confirmado não bate com nenhum candidato
                             votoConfirmado = true;
                             console.log('Confirmado como voto NULO');
-                        } else {
+                                let resultativo = document.querySelector('.resultativo.ativo')    
+                            if(resultativo !== null){
+                                resultativo.innerHTML = 'Votou NULO';
+                                
+                                resultativo.classList.remove('ativo');
+                            } 
+                            if(resultativo.nextElementSibling!==null){ 
+                                resultativo.nextElementSibling.classList.add('ativo');
+                                    } else{
+                                        alert('numero máximo de votos atingido, confira o Resultado ');
+                                      }
+                            
+                } else { //caso o numero combine com algum candidato
                         votoConfirmado = true;
-                    console.log('Confirmado como '+numero);
+                         console.log('Confirmado como '+numero);
+                         let resultativo = document.querySelector('.resultativo.ativo')    
+                       if(resultativo !== null){
+                        resultativo.innerHTML = `Votou ${numero}`;
+                        
+                        resultativo.classList.remove('ativo');
+                         } 
+                      if(resultativo.nextElementSibling!==null){ 
+                        resultativo.nextElementSibling.classList.add('ativo');
+                            } else{
+                                alert('numero máximo de votos atingido, confira o Resultado ');
+                         }
                     }
                 }
                   
@@ -412,11 +455,30 @@ function confirmar(){
                     EtapaAtual++;
                     if(etapas[EtapaAtual] !== undefined){
                         ComeçarEtapa();
-                    } else {
+                             } 
+                    else {
                         limpar();
+                        console.log('Fim da votação');
+                        // salva os resultado inicio
+                        let resultativo = document.querySelector('.resultativo.ativo')    
+                        if(resultativo !== null){
+                            resultativo.innerHTML = '--------';
+                            resultativo.classList.remove('ativo');
+                        } 
+                        if(resultativo.nextElementSibling!==null){ 
+                            resultativo.nextElementSibling.classList.add('ativo');
+                         } else{
+                                 alert('numero máximo de votos atingido, confira o Resultado ');
+                                }
+                          // salva os resultados fim     
                         fimvotaçao.style.display='block';
                     }
                 }
             }
         }
+}
+//botao de mostrar o resultado
+function mostrarresult (){
+    resultadovotaçao.style.height="auto";
+    caixa.style.display='block';
 }
